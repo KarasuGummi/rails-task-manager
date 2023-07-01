@@ -2,6 +2,7 @@
   <h1><%= @task[:title] %></h1>
   <div>
   <%= link_to "Edit task", edit_task_path, class: 'btn btn-secondary' %>
+  <%= link_to "Delete task", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
   </div>
 </div>
 
