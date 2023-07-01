@@ -3,8 +3,9 @@
   <div class="container">
     <ul>
       <% @tasks.each do |task| %>
-        <li><%= task.title %></li>
+        <li><%= link_to task.title, task_path(task) %></li>
       <% end %>
     </ul>
   </div>
+  <p class="new-task">Add a new task</p>
 </div>
